@@ -13,8 +13,8 @@ export class LoginComponent {
 
 //ac no=""
 //or
-acno:any
-psw:any
+// acno:any
+// psw:any
    
   userDetails:any={
     1000:{username:"aswanth",acno:1000,password:"abc123",balance:0},
@@ -25,11 +25,32 @@ psw:any
 
   //methods
 
-  login(){
+  // login(){
     // alert("Login worked")
-    var acnum = this.acno
-    var psw = this.psw
-    var userDetails=this.userDetails //for simplify the code using additional varible
+    // var acnum = this.acno
+    // var psw = this.psw
+    // var userDetails=this.userDetails //for simplify the code using add
+    
+  //   if(acnum in this.userDetails){
+  //    if(psw==userDetails[acnum]["password"]){
+  //     alert("login sucess")
+  //    }
+  //    else{
+  //     alert("incorrect password")
+  //    }
+  //   }
+  //   else{
+  //     alert("incorrect account number")
+  //   }
+  // }
+
+  login(acnum:any,psw:any){
+    // alert("Login worked")
+    // console.log(acnum.value,psw.value);
+    
+    var acnum = acnum.value
+    var psw = psw.value
+    var userDetails=this.userDetails //for simplify the code using add
     
     if(acnum in this.userDetails){
      if(psw==userDetails[acnum]["password"]){
@@ -44,15 +65,15 @@ psw:any
     }
   }
 
-  acnoChange(event:any){
+  // acnoChange(event:any){
     // console.log(event.target.value);   // nammukke log il kane use cheyyunnu  athil target value ethtra enne kananm .target.value
-    this.acno=event.target.value
+    // this.acno=event.target.value
     // console.log(this.acno);
     
-  }
-  pswChange(event:any){
-    this.psw=event.target.value
+  // }
+  // pswChange(event:any){
+  //   this.psw=event.target.value
     // console.log(this.psw);
     
-  }
+  // }
 }
